@@ -76,24 +76,30 @@ Un job schedulato (`@Scheduled`) interroga l'API Open-Meteo **ogni 30 secondi** 
 
 ### ▶️ Opzione 1 — Avvio in locale con Gradle
 
-#### Su Windows
-```bash
-gradlew.bat bootRun
+> Tutti i comandi Gradle vanno lanciati **dalla cartella `demo/`** (dove si trova `gradlew`).
+
+#### Su Windows (PowerShell)
+```powershell
+cd demo
+.\gradlew.bat bootRun
 ```
 
 #### Su Linux / Mac
 ```bash
+cd demo
 ./gradlew bootRun
 ```
 
-Una volta avviato, in console comparirà:
+Una volta avviato, in console comparirà un banner con il link da aprire:
 ```
 =======================================================
-✅ APPLICAZIONE AVVIATA CON SUCCESSO!
-🌍 Clicca qui sotto per aprire l'API nel browser:
-👉 http://localhost:8080/api/meteo/medie
+  APPLICAZIONE AVVIATA CON SUCCESSO!
+  Apri questo link nel browser:
+  http://localhost:8080/api/meteo/medie
 =======================================================
 ```
+
+> ⚠️ La root `http://localhost:8080/` mostra una pagina "Whitelabel Error": è normale, l'unico endpoint mappato è `/api/meteo/medie`.
 
 ### 🐳 Opzione 2 — Avvio con Docker
 
@@ -107,7 +113,8 @@ docker build -t progetto-meteo .
 docker run -p 8080:8080 progetto-meteo
 ```
 
-L'applicazione sarà raggiungibile su [http://localhost:8080](http://localhost:8080).
+L'endpoint REST sarà raggiungibile su [http://localhost:8080/api/meteo/medie](http://localhost:8080/api/meteo/medie).
+(La root `http://localhost:8080/` non è mappata e restituisce la pagina "Whitelabel Error" — è il comportamento atteso.)
 
 ---
 
