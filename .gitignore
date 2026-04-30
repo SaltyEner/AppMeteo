@@ -42,3 +42,6 @@ bin/
 ### OS ###
 .DS_Store
 Thumbs.db
+
+### Markdown ###
+*.md
