@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew test *)",
+      "Read(//c/tmp/**)",
+      "Bash(unzip -l \"/c/Users/salty/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-data-jpa-test/4.0.6/da5102fe8492c6ebfea6eaf0bea5b4e1fa41ca92/spring-boot-data-jpa-test-4.0.6.jar\")",
+      "Bash(unzip -l \"/c/Users/salty/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-webmvc-test/4.0.6/30be645d2df4b23c8dd30388304603cdad830213/spring-boot-webmvc-test-4.0.6.jar\")",
+      "Bash(unzip -l \"/c/Users/salty/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/7.0.7/58c34299b8a881978743a7b15b59c2b71f53271c/spring-test-7.0.7.jar\")"
+    ]
+  }
+}
