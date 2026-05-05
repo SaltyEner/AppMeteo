@@ -99,7 +99,7 @@ Una volta avviato, in console comparirà un banner con il link da aprire:
 =======================================================
 ```
 
-> ⚠️ La root `http://localhost:8080/` mostra una pagina "Whitelabel Error": è normale, l'unico endpoint mappato è `/api/meteo/medie`.
+Apri [http://localhost:8080](http://localhost:8080) per la dashboard meteo, oppure [http://localhost:8080/api/meteo/medie](http://localhost:8080/api/meteo/medie) per l'endpoint REST diretto.
 
 ### 🐳 Opzione 2 — Avvio con Docker
 
@@ -113,8 +113,7 @@ docker build -t progetto-meteo .
 docker run -p 8080:8080 progetto-meteo
 ```
 
-L'endpoint REST sarà raggiungibile su [http://localhost:8080/api/meteo/medie](http://localhost:8080/api/meteo/medie).
-(La root `http://localhost:8080/` non è mappata e restituisce la pagina "Whitelabel Error" — è il comportamento atteso.)
+L'endpoint REST sarà raggiungibile su [http://localhost:8080/api/meteo/medie](http://localhost:8080/api/meteo/medie) e la dashboard su [http://localhost:8080](http://localhost:8080).
 
 ---
 
@@ -125,12 +124,6 @@ L'endpoint REST sarà raggiungibile su [http://localhost:8080/api/meteo/medie](h
 | GET    | `/api/meteo/medie`        | Restituisce le medie meteo per le 5 città       |
 
 > ⚠️ **Nota**: subito dopo l'avvio l'endpoint potrebbe restituire una lista vuota perché il job non ha ancora raccolto dati. Attendi ~30 secondi e riprova.
-
-### 🗄 Console H2 (per debug)
-Durante lo sviluppo è disponibile la console del database:
-- URL: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-- JDBC URL: `jdbc:h2:mem:meteodb`
-- User: `sa` (password vuota)
 
 ---
 
